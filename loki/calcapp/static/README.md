@@ -1,3 +1,76 @@
+# Ex.08 Design of a Standard Calculator
+## Date:23.04.2024
+
+## AIM:
+To design a web application for a standard calculator with minimum five operations.
+
+## DESIGN STEPS:
+
+### Step 1:
+Clone the github repository and create Django admin interface.
+
+### Step 2:
+Change settings.py file to allow request from all hosts.
+
+### Step 3:
+Use CSS for creating attractive colors.
+
+### Step 4:
+Write JavaScript program for implementing five different operations.
+
+### Step 5:
+Validate the HTML and CSS code.
+
+### Step 6:
+Publish the website in the given URL.
+
+## PROGRAM :
+```
+calc.html
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h3 style="color: azure;">LOKESH M (212223230114)</h3>
+        <form class="calculator" name="calc">
+            
+            <input type="text" readonly class="value" name="txt">
+            <span class="num clear" onclick="calc.txt.value = ''">C</span>
+            <span class="num" onclick="document.calc.txt.value += '/'">/</span>
+            <span class="num" onclick="document.calc.txt.value += '*'">X</span>
+            <span class="num" onclick="document.calc.txt.value += '7'">7</span>
+            <span class="num" onclick="document.calc.txt.value += '8'">8</span>
+            <span class="num" onclick="document.calc.txt.value += '9'">9</span>
+            <span class="num" onclick="document.calc.txt.value += '-'">-</span>
+            <span class="num" onclick="document.calc.txt.value += '4'">4</span>
+            <span class="num" onclick="document.calc.txt.value += '5'">5</span>
+            <span class="num" onclick="document.calc.txt.value += '6'">6</span>
+            <span class="num plus" onclick="document.calc.txt.value += '+'">+</span>
+            <span class="num" onclick="document.calc.txt.value += '1'">1</span>
+            <span class="num" onclick="document.calc.txt.value += '2'">2</span>
+            <span class="num" onclick="document.calc.txt.value += '3'">3</span>
+            <span class="num" onclick="document.calc.txt.value += '0'">0</span>
+            <span class="num" onclick="document.calc.txt.value += '00'">00</span>
+            <span class="num" onclick="document.calc.txt.value += '.'">.</span>
+            <span class="num equal" onclick="document.calc.txt.value = eval(calc.txt.value)">=</span>
+        </form>
+    </div>
+
+    <script src="./vanilla-tilt.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+
+index.js
+
 var VanillaTilt = (function () {
     'use strict';
     
@@ -503,3 +576,122 @@ var VanillaTilt = (function () {
         glare: true,
         "max-glare": 0.2,
     });
+
+styles.css
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #091921;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#e91e63, #ffc107);
+    clip-path: circle(22% at 30% 20%);
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#ffffff, #da00ff);
+    clip-path: circle(20% at 70% 90%);
+}
+
+.container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 10;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+    border-left: 1px solid rgba(255, 255, 255, 0.02);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.container .calculator {
+    position: relative;
+    display: grid;
+}
+
+.container .calculator .value {
+    grid-column: span 4;
+    height: 140px;
+    width: 300px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 30px;
+    background: transparent;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.container .calculator span {
+    display: grid;
+    place-items: center;
+    width: 75px;
+    height: 75px;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.5s;
+}
+
+.container .calculator span:hover {
+    transition: 0s;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.container .calculator span:active {
+    background: #007bff;
+    color: #192f00;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.container .calculator .clear {
+    grid-column: span 2;
+    width: 150px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.container .calculator .plus {
+    grid-row: span 2;
+    height: 150px;
+}
+
+.equal {
+    background: rgba(255, 255, 255, 0.05)   ;
+}
+```
+
+
+
+
+## RESULT:
+The program for designing a standard calculator using HTML and CSS is executed successfully.
