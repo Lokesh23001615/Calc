@@ -689,21 +689,6 @@ body::after {
     background: rgba(255, 255, 255, 0.05)   ;
 }
 ```
-![alt text](loki/calcapp/static/out1.png)
-
-![alt text](loki/calcapp/static/out2.png)
-
-![alt text](loki/calcapp/static/out3.png)
-
-![alt text](loki/calcapp/static/out4.png)
-
-![alt text](loki/calcapp/static/out5.png)
-
-![alt text](loki/calcapp/static/out6.png)
-
-![alt text](loki/calcapp/static/out7.png)
-
-![alt text](loki/calcapp/static/out8.png)
 
 ## RESULT:
 The program for designing a standard calculator using HTML and CSS is executed successfully.
